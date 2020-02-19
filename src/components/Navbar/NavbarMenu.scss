@@ -1,0 +1,73 @@
+@import '../../variables.scss';
+
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.navbar-menu__hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $border--green;
+  margin: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.navbar-menu__dropdown {
+  position: absolute;
+  top: 80px;
+  width: 90%;
+
+  border-radius: 10px;
+
+  background-color: $white;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1); 
+
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+
+
+  &.collapse {
+    height: 0;
+    box-shadow: none;
+  }
+
+  &.expand {
+    height: 120px;
+  }
+}
+
+.navbar-menu__tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 40px;
+
+  border-bottom: 2px solid $light-grey;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $text--grey;
+
+  box-sizing: border-box;
+  &:hover,
+  &:focus {
+    color: $green;
+    background-color: $light-green;
+    cursor: pointer;
+  }
+}

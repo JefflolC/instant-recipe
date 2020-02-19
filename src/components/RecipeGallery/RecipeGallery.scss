@@ -1,0 +1,16 @@
+.recipe-gallery {  
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  background-color: white;
+  text-align: center;
+
+  &.display-block {
+    display: block;
+  }
+  
+  &.display-none {
+    display: none;
+  }
+}

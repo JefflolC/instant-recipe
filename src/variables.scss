@@ -1,0 +1,59 @@
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$grey: rgba(153, 153, 153, 1);
+$light-grey: rgba(242, 242, 242, 1);
+$dark-grey: rgba(222, 222, 222, 1);
+$darker-grey: rgba(202, 202, 202, 1);
+$green: rgba(139, 173, 100, 1);
+$light-green: rgba(239, 251, 229, 1);
+$dark-green: rgba(219, 231, 209, 1);
+$darker-green: rgba(199, 211, 189, 1);
+$red: rgba(246, 130, 153, 1);
+$yellow: rgba(209, 177, 136, 1);
+
+$text--black: $black;
+$text--grey: $grey;
+$text--green: $green;
+$text--red: $red;
+
+$border--green: rgba(139, 173, 100, 0.25);
+
+
+%clear-button {
+  &:hover,
+  &:focus {
+    background-color: $dark-green;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $darker-green;
+  }
+}
+
+%text-button {
+  color: $grey;
+  border-bottom: 2px solid transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $green;
+    color: $black;
+    // transition: border-bottom 2s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+// %button {
+//   width: 140px;
+//   height: 40px;
+//   padding: 0 20px;
+//   background-color: $light-green;
+// }
+
+%reset-button {
+  border: 0;
+  // outline: none;
+  // outline: 2px solid $dark-green;
+}

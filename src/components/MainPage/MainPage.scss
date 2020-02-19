@@ -1,0 +1,139 @@
+@import '../../variables.scss';
+
+.main-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+
+  &.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.display-none {
+    display: none;
+  }
+}
+
+.main-page > .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.2;
+  z-index: -10;
+}
+
+.main-page > .search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-page > .search > .search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 500px;
+  height: 40px;
+
+  border-radius: 40px;
+  margin: 10px;
+
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box;
+}
+
+.main-page .search-form > .search-form__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  margin: 0 10px;
+
+  z-index: 10;
+}
+
+.main-page .search-form > .search-form__input {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 0 20px 0 45px;
+  border-radius: 40px;
+  border: 0;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $text--black;
+
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $light-green;
+  }
+
+  &::placeholder {
+    opacity: 0.37;
+  }
+}
+
+.main-page .search-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.main-page .search-buttons > .search-buttons__search,
+.main-page .search-buttons > .search-buttons__filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: 0;
+  margin: 0 10px;
+
+  background-color: $light-green;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $text--green;
+
+  &:hover {
+    background-color: $dark-green;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $darker-green;
+  }
+}
